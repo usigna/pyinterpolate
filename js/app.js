@@ -1,22 +1,3 @@
-function changeTitle() {
-  const message = 'Wróć na stronę!';
-  let original;
-
-  window.addEventListener('focus', function () {
-    if (original) {
-      document.title = original;
-    }
-  })
-
-  window.addEventListener('blur', function () {
-    const title = document.title;
-    if (title != message) {
-      original = title;
-    }
-    document.title = message;
-  })
-}
-
 function showHamburgerMenu() {
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.navigation');
@@ -40,7 +21,6 @@ function showHamburgerMenu() {
 
 const init = function () {
   changeTitle();
-  showHamburgerMenu();
 };
 
 document.addEventListener('DOMContentLoaded', init);
