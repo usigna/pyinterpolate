@@ -34,6 +34,26 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+/* logo */
+.logo {
+  text-decoration: none;
+}
+
+/* link */
+.link {
+  color: $blueColor;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $secondBlueColor;
+  }
+
+  &:focus {
+    border: 2px dotted $blueColor;
+    padding: 0.2rem 1rem;
+  }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -102,6 +122,38 @@ body {
   }
 }
 
+/* footer */
+.footer {
+  margin-top: 1rem;
+  padding: 2.5rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: rgb(11,71,167);
+    background: linear-gradient(90deg, rgba(11,71,167,1) 0%, rgba(247,24,29,1) 100%);
+    position: absolute;
+    top: -5px;
+    left: 0;
+  }
+}
+
+.footer__wrapper {
+  @include flex(column, center, center);
+
+  @media screen and (min-width: $mediumWidth) {
+    @include flex(row, center, space-between);
+  }
+}
+
+.copy {
+  @include flex(row, center, center);
+  img {
+    margin-right: 0.5rem;
+  }
+}
 
 // note
 // background
