@@ -20,7 +20,7 @@ function showHamburgerMenu() {
 }
 
 const init = function () {
-  changeTitle();
+  showHamburgerMenu();
 };
 
 document.addEventListener('DOMContentLoaded', init);

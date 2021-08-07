@@ -32,11 +32,7 @@ body {
   margin: 0 auto;
   font-size: 1.6rem;
   font-family: "Work Sans", sans-serif;
-}
-
-/* logo */
-.logo {
-  text-decoration: none;
+  font-weight: 500;
 }
 
 /* link */
@@ -122,10 +118,236 @@ body {
   }
 }
 
+/* header */
+.header {
+  padding: 2rem 0;
+  margin-bottom: 3.5rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: rgb(11,71,167);
+    background: linear-gradient(90deg, rgba(11,71,167,1) 0%, rgba(247,24,29,1) 100%);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+}
+
+.header__wrapper {
+  @include flex(row, flex-end, space-between);
+}
+
+.logo {
+  text-decoration: none;
+}
+
+/* navigation */
+.navigation {
+  height: 100%;
+  width: 100%;
+  padding: 5rem 0;
+  background: $whiteColor;
+  @include flex(column-reverse, center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  z-index: 5;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s;
+
+  @media screen and (min-width: $largeWidth) {
+    height: auto;
+    padding: 0;
+    background: transparent;
+    @include flex(row, flex-start, flex-start);
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 0;
+    position: static;
+  }
+}
+
+.navigation__list {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 700px;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 5.5rem 0;
+  line-height: 2;
+  text-align: center;
+  z-index: 5;
+
+  @media screen and (min-width: $largeWidth) {
+    padding: 0 0.5rem;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+  }
+}
+
+.navigation__link {
+  color: $blackColor;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $blueColor;
+  }
+
+  &:focus {
+    border: 2px dotted $blueColor;
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    margin-right: 3.6rem;
+  }
+}
+
+.navigation--active {
+  transform: translateX(0px);
+  transition: transform .3s .1s ease-in-out, visibility 0s 0s;
+  visibility: visible;
+}
+
+.hamburger {
+  width: 50px;
+  height: 45px;
+  display: inline-block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 5px;
+  z-index: 6;
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s;
+  display: block;
+
+  @media screen and (min-width: $largeWidth) {
+    display: none;
+  }
+}
+
+.hamburger__box {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: $blackColor;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: $blackColor;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    top: 10px;
+  }
+}
+
+.hamburger--active {
+  background-color: transparent;
+
+  .hamburger__inner {
+    background-color: transparent;
+
+    &::before {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+/* navigation boxes */
+.navigation__boxes {
+  @include flex(row, center, space-between);
+}
+
+.search {
+  margin-right: 1.5rem;
+}
+
+.search__btn {
+  width: 40px;
+  height: 40px;
+  color: $whiteColor;
+  background: $blueColor;
+  border: none;
+  border-radius: 50%;
+
+  &:focus {
+    border: 2px dotted $blueColor;
+  }
+}
+
+.languages {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 75px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff url("../img/chevron-down-solid.svg") no-repeat 90% 50%;
+}
+
+.languages select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    border: 2px dotted $blueColor;
+  }
+}
+
 /* footer */
 .footer {
-  margin-top: 1rem;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   position: relative;
 
   &::before {
