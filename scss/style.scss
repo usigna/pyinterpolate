@@ -508,8 +508,50 @@ body {
 
 .text__paragraph {
   font-size: 1.6rem;
-
 }
+
+/* social icons */
+.social-icons {
+  padding: 1.5rem 0;
+  @include flex(row, center, center);
+}
+
+.social-icon {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(90deg, rgba(11,71,167,1) 0%, rgba(247,24,29,1) 100%);
+  border-radius: 50%;
+  @include flex(row, center, center);
+
+  &:first-of-type {
+    margin-right: 2rem;
+  }
+
+  a {
+    width: 65px;
+    height: 65px;
+    color: $blueColor;
+    font-size: 3rem;
+    background: $whiteColor;
+    border-radius: 50%;
+    text-decoration: none;
+    @include flex(row, center, center);
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $blackColor;
+    }
+
+    &:focus {
+      width: 75px;
+      height: 75px;
+      border: 2px dotted $blueColor;
+    }
+  }
+}
+
+
 
 /* footer */
 .footer {
