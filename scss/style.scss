@@ -484,6 +484,23 @@ body {
       left: 0;
     }
   }
+
+  &--decoration {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 650px;
+      height: 650px;
+      background: url("../img/logo-removebg.png") no-repeat center/cover;
+      position: absolute;
+      filter: brightness(0);
+      opacity: 0.05;
+      right: 25%;
+      bottom: -5%;
+      z-index: -1;
+    }
+  }
 }
 
 .section__wrapper {
