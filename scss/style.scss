@@ -363,6 +363,10 @@ body {
     bottom: -2rem;
     left: 0;
   }
+
+  &--subpage {
+    padding: 2.5rem 0;
+  }
 }
 
 .parallax {
@@ -395,6 +399,21 @@ body {
     margin-right: -50px;
   }
 
+  &--subpage {
+    width: 100px;
+    height: 100px;
+  }
+
+  &--subpage-left {
+    margin-top: -15px;
+    margin-left: 150px;
+  }
+
+  &--subpage-right {
+    margin-bottom: -15px;
+    margin-right: 150px;
+  }
+
   @media screen and (min-width: $largeWidth) {
     display: block;
   }
@@ -417,17 +436,25 @@ body {
 }
 
 .title {
+  max-width: 600px;
   margin: 0 0 1.5rem;
   font-size: 4rem;  
 
+  &--subpage {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
   @media screen and (min-width: $mediumWidth) {
     font-size: 6.5rem;  
+
+    &--subpage {
+      font-size: 4.5rem;
+    }
   }
 }
 
-.subtitle {
-  font-size: 1.6rem;
-  font-weight: 400;
+.title-decoration {
   position: relative;
 
   &::before,
@@ -448,6 +475,12 @@ body {
   &::after {
     right: -50%;
   }
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  position: relative;
 
   a {
     color: $whiteColor;
