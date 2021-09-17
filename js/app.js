@@ -35,9 +35,18 @@ function useParallax() {
   parallaxWrapper.addEventListener('mousemove', parallax);
 }
 
+function setImageMaxSize() {
+  const images = document.querySelectorAll('.image img');
+
+  images.forEach(function(img) {
+    img.style.maxWidth = img.naturalWidth + 'px';
+  });
+}
+
 const init = function () {
   showHamburgerMenu();
   useParallax();
+  setImageMaxSize();
 };
 
 document.addEventListener('DOMContentLoaded', init);
