@@ -601,6 +601,28 @@ body {
   }
 }
 
+/* list */
+.list {
+  &--unordered {
+    list-style: none;
+    
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url("../img/logo-removebg.png") no-repeat center/cover;
+        filter: brightness(0);
+        position: absolute;
+        top: 4px;
+        left: -22px;
+      }
+    }
+  }
+}
+
 
 
 /* footer */
