@@ -644,6 +644,47 @@ strong {
   }
 }
 
+/* button */
+.btn {
+  min-width: 150px;
+  padding: 0.5rem 1.5rem;
+  color: $whiteColor;
+  background: $blueColor;
+  border: 1px solid $blueColor;
+  border-radius: 5px;
+  transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    background: $secondBlueColor;
+  }
+
+  &--copy {
+    margin: 0.5rem 0;
+  }
+}
+
+/* code */
+.pre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.code {
+  min-width: 100%;
+  display: inline-block;
+  background: rgba(6, 45, 107, 0.25);
+  padding: 1.5rem;
+  border-radius: 5px;
+
+  @media screen and (min-width: $mediumWidth) {
+    min-width: 50%;
+  }
+}
+
+
 
 
 /* footer */

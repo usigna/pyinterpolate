@@ -15,10 +15,7 @@
 </head>
 
 <body>
-  <ul class="skip-links wrapper">
-    <li><a href="#main" class="skip-link">Go to main content</a></li>
-    <li><a href="#contact" class="skip-link">Go to contact</a></li>
-  </ul>
+  <a href="#main" class="skip-link wrapper">Go to main content</a>
   
   <h1 class="sr-only">Pyinterpolate</h1>
 
@@ -100,6 +97,100 @@
         </div>
         <div data-speed="-5" class="layer layer--left layer--subpage layer--subpage-left"></div>
         <div data-speed="5" class="layer layer--right layer--subpage layer--subpage-right"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__wrapper wrapper">
+        <h2 class="sr-only">How to start</h2>
+        <div class="text">
+          <h3 class="text__title">pip package installation</h3>
+          <p class="text__paragraph">
+            To install last stable version of the package use pip package manager.
+          </p>
+          <p class="text__paragraph">
+            Recommended way of installing Python packages is to create <a href="https://docs.python.org/3/library/venv.html" target="_blank" class="link">Virtual Environment<span class="sr-only">open in new tab</span></a> and install everything inside it, we encourage you to do so. Navigate to the directory where you’d like to install package and type:
+          </p>
+          <pre class="pre">
+            <code class="code">pip install pyinterpolate</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+          <p class="text__paragraph">
+            If there are no errors you may use package.
+          </p>
+        </div>
+        <div class="text">
+          <h3 class="text__title">Problem with libspatialindex_c.so</h3>
+          <p class="text__paragraph">
+            There is a chance that your system doesn’t have libspatialindex_c.so file. You must install it from a terminal.
+          </p>
+          <p class="text__paragraph">
+            Linux installation:
+          </p>
+          <pre class="pre">
+            <code class="code">sudo apt install libspatialindex-dev</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+          <p class="text__paragraph">
+            MacOS installation:
+          </p>
+          <pre class="pre">
+            <code class="code">brew install spatialindex</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+        </div>
+        <div class="text">
+          <h3 class="text__title">Manual installation of the newest version</h3>
+          <p class="text__paragraph">
+            If you are interested in the newest version of package from main or dev branch then you should install it manually. To do so download package from the repository, move to the package directory and type:
+          </p>
+          <pre class="pre">
+            <code class="code">pip install ./</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+          <p class="text__paragraph">
+            As with pip installation we recommend use of Virtual Environments.
+          </p>
+        </div>
+        <div class="text">
+          <h3 class="text__title">I’d like to use Jupyter Notebooks, what should I do?</h3>
+          <p class="text__paragraph">
+            If you use conda environment you may use Jupyter Notebooks and you are not obligated to create Virtual Environment - you’ll be working in conda environment. To run pyinterpolate with Jupyter Notebooks you must create environment for it and install everything from the conda environment.
+          </p>
+          <p class="text__paragraph">
+            Step 1:
+          </p>
+          <pre class="pre">
+            <code class="code">conda create -n [NAME OF YOUR ENV]</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+          <p class="text__paragraph">
+            Step 2:
+          </p>
+          <pre class="pre">
+            <code class="code">conda activate [NAME OF YOUR ENV]</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+          <p class="text__paragraph">
+            Step 3:
+          </p>
+          <pre class="pre">
+            <code class="code">conda install -c conda-forge python=3.7 pip notebook</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+          <p class="text__paragraph">
+            Step 4:
+          </p>
+          <pre class="pre">
+            <code class="code">pip install pyinterpolate</code>
+            <button class="btn btn--copy">Copy</button>
+          </pre>
+        </div>
+        <div class="text">
+          <h3 class="text__title">More questions?</h3>
+          <p class="text__paragraph">
+            Don’t be scared to ask - create request in <a href="https://github.com/szymon-datalions/pyinterpolate/issues" target="_blank" class="link">Issues<span class="sr-only">open in a new tab</span></a>. We will do our best to simlify installation or help with it.
+          </p>
+        </div>
       </div>
     </section>
   </main>
