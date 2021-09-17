@@ -474,11 +474,11 @@ strong {
   }
 
   &::before {
-    left: -50%;
+    left: -100px;
   }
 
   &::after {
-    right: -50%;
+    right: -100px;
   }
 }
 
