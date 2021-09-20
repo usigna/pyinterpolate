@@ -37,9 +37,20 @@ function useParallax() {
 
 function setImageMaxSize() {
   const images = document.querySelectorAll('.image img');
+  const mobile = window.matchMedia("screen and (min-width: 400px)");
 
-  images.forEach(function(img) {
-    img.style.maxWidth = img.naturalWidth + 'px';
+  if (mobile.matches) {
+    images.forEach(function(img) {
+      img.style.maxWidth = img.naturalWidth + 'px';
+    });
+  }
+
+  mobile.addListener(function(mobile) {
+    if (mobile.matches) {
+      images.forEach(function(img) {
+        img.style.maxWidth = img.naturalWidth + 'px';
+      });
+    }
   });
 }
 
