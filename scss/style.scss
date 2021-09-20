@@ -39,6 +39,9 @@ body {
 .link {
   color: $blueColor;
   transition: color 0.2s;
+  text-decoration: none;
+  border-bottom: 1px dotted $blueColor;
+  position: relative;
 
   &:hover {
     color: $secondBlueColor;
@@ -47,6 +50,45 @@ body {
   &:focus {
     border: 2px dotted $blueColor;
     padding: 0.2rem 1rem;
+  }
+
+  &--external {
+    margin-right: 1.5rem;
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: url("../img/arrow-up-blue.svg") no-repeat center/cover;
+      position: absolute;
+      top: -4px;
+      right: -12px;
+      transform: rotate(45deg);
+    }
+  }
+
+  /* for skip links (table, map, license) */
+  &--hidden {
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+    text-align: center;
+    text-decoration: none;
+    &:focus,
+    &:active {
+      clip: auto !important;
+      -webkit-clip-path: none !important;
+      clip-path: none !important;
+      height: auto !important;
+      margin: auto !important;
+      overflow: visible !important;
+      width: auto !important;
+      white-space: normal !important;
+    }
   }
 }
 
@@ -483,6 +525,20 @@ strong {
 
   a {
     color: $whiteColor;
+    margin-right: 1.5rem;
+    border-bottom: 1px dotted $whiteColor;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: url("../img/arrow-up-white.svg") no-repeat center/cover;
+      position: absolute;
+      top: 0;
+      right: -10px;
+      transform: rotate(45deg);
+    }
 
     &:hover {
       color: $whiteColor;
