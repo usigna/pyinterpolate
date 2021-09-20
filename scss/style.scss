@@ -19,11 +19,11 @@ body {
   position: relative;
   scroll-behavior: smooth;
   font-size: 62.25%;
+  overflow-x: hidden;
 }
 
 body {
   z-index: 0;
-  overflow-x: hidden;
 }
 
 .wrapper {
