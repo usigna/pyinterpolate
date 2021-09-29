@@ -19,6 +19,17 @@ function showHamburgerMenu() {
   hamburger.addEventListener('click', handleClick);
 }
 
+function changeLanguage() {
+  const select = document.getElementById('languages-select');
+
+  select.addEventListener('change', function() {
+    let value = select.options[select.selectedIndex].value;
+
+    // console.log(value)
+    // console.log(window. location. href )
+  })
+}
+
 function useParallax() {
   let parallaxWrapper = document.querySelector('.parallax');
 
@@ -75,6 +86,7 @@ function copiedToClipboard() {
 
 const init = function () {
   showHamburgerMenu();
+  // changeLanguage();
   useParallax();
   setImageMaxSize();
   copiedToClipboard();

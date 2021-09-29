@@ -54,6 +54,7 @@ body {
 
   &--external {
     margin-right: 1.5rem;
+    position: relative;
     &::before {
       content: "";
       width: 10px;
@@ -64,6 +65,14 @@ body {
       right: -12px;
       transform: rotate(45deg);
     }
+  }
+
+  /* skip link for code box */
+  &--code {
+    min-width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
   }
 
   /* for skip links (table, map, license) */
@@ -674,7 +683,7 @@ strong {
   width: 100%;
   img {
     width: 100%;
-    min-width: 200px;
+    min-width: 320px;
   }
 }
 
