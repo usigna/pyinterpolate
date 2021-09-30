@@ -53,6 +53,7 @@ body {
   }
 
   &--external {
+    display: inline-block;
     margin-right: 1.5rem;
     position: relative;
     &::before {
@@ -61,7 +62,7 @@ body {
       height: 10px;
       background: url("../img/arrow-up-blue.svg") no-repeat center/cover;
       position: absolute;
-      top: -4px;
+      top: 0px;
       right: -12px;
       transform: rotate(45deg);
     }
