@@ -24,6 +24,9 @@ function changeLanguage() {
 
   select.addEventListener('change', function() {
     let value = select.options[select.selectedIndex].value;
+    let actualLang = window.location.href;
+
+    console.log(actualLang);
 
     // console.log(value)
     // console.log(window. location. href )
@@ -66,6 +69,8 @@ function setImageMaxSize() {
 }
 
 function copiedToClipboard() {
+  const html = document.querySelector('html');
+  const htmlLang = html.getAttribute('lang');
   const pre = document.querySelectorAll('.pre');
 
   for (let i = 0; i < pre.length; i++) {
@@ -73,11 +78,22 @@ function copiedToClipboard() {
     let btn = pre[i].querySelector('.btn--copy');
     btn.addEventListener('click', function() {
       navigator.clipboard.writeText(code.textContent);
-      this.textContent = 'Copied!';
+
+      if(htmlLang === 'en') {
+        this.textContent = 'Copied!';
+      } else if(htmlLang === 'pl') {
+        this.textContent = 'Skopiowano!';
+      }
 
       if (this.textContent == 'Copied!') {
         setTimeout(function() {
           btn.textContent = 'Copy';
+        }, 2500);
+      }
+
+      if (this.textContent == 'Skopiowano!') {
+        setTimeout(function() {
+          btn.textContent = 'Kopiuj';
         }, 2500);
       }
     })
@@ -86,7 +102,7 @@ function copiedToClipboard() {
 
 const init = function () {
   showHamburgerMenu();
-  // changeLanguage();
+  changeLanguage();
   useParallax();
   setImageMaxSize();
   copiedToClipboard();

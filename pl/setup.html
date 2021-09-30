@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pyinterpolate - Instalacja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.min.css">
-  <script src="../js/app.js"></script>
 </head>
 
 <body>
@@ -99,6 +100,29 @@
         <div data-speed="5" class="layer layer--right layer--subpage layer--subpage-right"></div>
       </div>
     </section>
+    <section class="section">
+      <div class="section__wrapper wrapper">
+        <h2 class="sr-only">Jak zacząć?</h2>
+        <div class="text">
+          <h3 class="text__title">instalacja pip package</h3>
+          <p class="text__paragraph">
+            To install last stable version of the package use pip package manager.
+          </p>
+          <p class="text__paragraph">
+            Recommended way of installing Python packages is to create <a href="https://docs.python.org/3/library/venv.html" target="_blank" class="link link--external">Virtual Environment</a> <span class="sr-only">open in new tab</span> and install everything inside it, we encourage you to do so. Navigate to the directory where you’d like to install package and type:
+          </p>
+          <pre class="pre">
+            <a href="#code-bottom" id="code-top" class="link link--code link--hidden">Skip the code</a>
+            <code class="code">pip install pyinterpolate</code>
+            <a href="#code-top" id="code-bottom" class="link link--code link--hidden">Back to the code</a>
+            <button class="btn btn--copy">Kopiuj</button>
+          </pre>
+          <p class="text__paragraph">
+            If there are no errors you may use package.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -118,5 +142,9 @@
         </p>
     </div>
   </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 </html>

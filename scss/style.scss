@@ -634,6 +634,10 @@ strong {
   &--bold {
     font-weight: 500;
   }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
 
 /* social icons */
@@ -724,7 +728,7 @@ strong {
 .code {
   min-width: 100%;
   display: inline-block;
-  background: rgba(6, 45, 107, 0.25);
+  // background: rgba(6, 45, 107, 0.25);
   padding: 1.5rem;
   border-radius: 5px;
 
