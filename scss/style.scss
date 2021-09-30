@@ -732,6 +732,10 @@ strong {
   // background: rgba(6, 45, 107, 0.25);
   padding: 1.5rem;
   border-radius: 5px;
+  overflow-x: auto;
+  width: fit-content;
+  max-width: 100%;
+  white-space: pre-wrap;
 
   @media screen and (min-width: $mediumWidth) {
     min-width: 50%;
@@ -796,6 +800,14 @@ strong {
   max-width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.3);
 
+  caption {
+    text-align: left;
+
+    @media screen and (min-width: $mediumWidth) {
+      text-align: center;
+    }
+  }
+
   tr {
     th {
       padding: 0.4rem 2rem;
@@ -806,7 +818,6 @@ strong {
 
     td {
       padding: 0.2rem 2rem;
-      // border: 1px solid rgba(0, 0, 0, 0.3);
       font-weight: 400;
       white-space: nowrap;
     }
