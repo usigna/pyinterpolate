@@ -737,6 +737,53 @@ strong {
   }
 }
 
+/* gallery */
+.gallery-wrapper {
+  margin: 2.5rem 0;
+}
+
+.gallery { 
+  display: flex; 
+  flex-direction: column;
+  max-width: 450px;
+}
+
+.gallery__images {
+  display: flex;
+  a { 
+    max-width: 150px;
+    border: 1px dotted $secondBlueColor;
+    max-height: 150px;
+    flex: 1 1 1%;
+    opacity: .3;
+    transition: .3s;
+    margin: 0 10px;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%; 
+    height: auto; 
+  }
+}
+
+.fullimagecontainer {
+  margin: 1.5rem 0;
+  max-height: 500px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
 
 
 
