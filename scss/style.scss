@@ -68,8 +68,9 @@ body {
     }
   }
 
-  /* skip link for code box */
-  &--code {
+  /* skip link for code and table box */
+  &--code,
+  &--table {
     min-width: 100%;
     text-align: left;
     display: flex;
@@ -785,6 +786,32 @@ strong {
   }
 }
 
+/* table */
+.table {
+  margin: 1rem 0;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  tr {
+    th {
+      padding: 0.4rem 2rem;
+      background: $blueColor;
+      color: $whiteColor;
+      font-weight: 500;
+    }
+
+    td {
+      padding: 0.2rem 2rem;
+      // border: 1px solid rgba(0, 0, 0, 0.3);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}
 
 
 /* footer */
