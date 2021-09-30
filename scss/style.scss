@@ -561,6 +561,11 @@ strong {
 
   @media screen and (min-width: $mediumWidth) {
     font-size: 2rem;  
+
+    &--subpage {
+      font-size: 1.6rem;
+      max-width: 500px;
+    }
   }
 }
 
